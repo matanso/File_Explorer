@@ -18,7 +18,7 @@ class App extends React.Component {
         return (
             <div className="App">
                 {this.renderPathBar()}
-                <SearchBar data={Data} search={file => this.search(file)}/>
+                <SearchBar data={Data} update={(current, parents) => this.setState({current, parents})}/>
                 {this.renderBackButton()}
                 <FileList files={this.state.current.children} onClick={(i) => {
                     this.state.parents.push(this.state.current);
@@ -49,40 +49,6 @@ class App extends React.Component {
                         current: this.state.parents[index] || this.state.current
                     });
                 }}>{name}</button>;
-        }
-    }
-
-    search(file) {
-        if(Data.name === file) {
-            this.setState({
-                current: {children: [Data], name: '/', type: 'folder'},
-                parents: [],
-            });
-            return;
-        }
-
-
-        let path = find(file, Data);
-        this.setState({
-            parents: path.slice(0, path.length - 1),
-            current: path[path.length - 1]
-        });
-
-        function find(file, node) {
-            if(!node.children) return null;
-            for(let n of node.children) {
-                if(n.name === file) {
-                    return n.type === 'file' ?
-                        [node] :
-                        [node, n];
-                }
-                let res = find(file, n);
-                if(Array.isArray(res)) {
-                    res.unshift(node);
-                    return res;
-                }
-            }
-            return null;
         }
     }
 }

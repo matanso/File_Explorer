@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
                     maxVisible={2}
                     filterOption={(input, option) => option.toLowerCase().startsWith(input.toLowerCase())}
                     customClasses={{input: 'searchInput', listItem: 'option', listAnchor: 'link', results: 'list'}}
-                    onOptionSelected={this.props.search}
+                    onOptionSelected={file => this.search(file)}
                 />
                 </div>
             </div>
@@ -27,6 +27,31 @@ class SearchBar extends React.Component {
             let files = [node.name];
             for(let n of (node.children || [])) files = files.concat(getAllFiles(n));
             return files;
+        }
+    }
+
+    search(file) {
+        let root = {children: [this.props.data], name: '/', type: 'folder'};
+
+        let path = find(file, root);
+        this.props.update(path[path.length - 1],
+            path.slice(0, path.length - 1));
+
+        function find(file, node) {
+            if(!node.children) return null;
+            for(let n of node.children) {
+                if(n.name === file) {
+                    return n.type === 'file' ?
+                        [node] :
+                        [node, n];
+                }
+                let res = find(file, n);
+                if(Array.isArray(res)) {
+                    res.unshift(node);
+                    return res;
+                }
+            }
+            return null;
         }
     }
 }
