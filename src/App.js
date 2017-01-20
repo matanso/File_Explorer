@@ -1,9 +1,10 @@
 import React from 'react';
-import FileList from './FileList/index';
 import BackButton from './BackButton/index';
-import SearchBar from './SearchBar/index'
-import Data from './data.json';
+import SearchBar from './SearchBar/index';
+import FileList from './FileList/index';
 import Export from './export/index';
+import Create from './create/index';
+import Data from './data.json';
 import './App.css';
 
 class App extends React.Component {
@@ -19,6 +20,11 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Export data={Data}/>
+                {this.state.current.name !== '/' && <Create create={file => {
+                    this.state.current.children.push(file);
+                    this.forceUpdate();
+                }}/>
+                }
                 <br/>
                 {this.renderPathBar()}
                 <SearchBar data={Data} update={(current, parents) => this.setState({current, parents})}/>

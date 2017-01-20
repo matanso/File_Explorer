@@ -43,9 +43,9 @@
 .container .icon{
     position: absolute;
     top: 50%;
-    margin-left: 15px;
+    margin-left: -12px;
     margin-top: -9px;
-    z-index: 1;
+    z-index: 0;
     color: #4f5b66;
 }
 

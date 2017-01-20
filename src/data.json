@@ -1,52 +1,96 @@
 {
   "type": "folder",
-  "name": "animals",
+  "name": "items",
   "children": [
     {
       "type": "folder",
-      "name": "cat",
+      "name": "animals",
       "children": [
         {
           "type": "folder",
-          "name": "images",
+          "name": "cat",
           "children": [
             {
-              "type": "file",
-              "name": "cat001.jpg"
-            }, {
-              "type": "file",
-              "name": "cat002.jpg"
+              "type": "folder",
+              "name": "images",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "cat001.jpg"
+                },
+                {
+                  "type": "file",
+                  "name": "cat002.jpg"
+                }
+              ]
             }
           ]
+        },
+        {
+          "type": "folder",
+          "name": "dog",
+          "children": [
+            {
+              "type": "folder",
+              "name": "images",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "dog001.jpg"
+                },
+                {
+                  "type": "file",
+                  "name": "dog002.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "bear.png"
+        },
+        {
+          "type": "file",
+          "name": "horse.png"
+        },
+        {
+          "name": "names.txt",
+          "type": "file"
         }
       ]
     },
     {
+      "name": "cars",
       "type": "folder",
-      "name": "dog",
       "children": [
         {
+          "name": "ford",
           "type": "folder",
-          "name": "images",
           "children": [
             {
-              "type": "file",
-              "name": "dog001.jpg"
-            }, {
-              "type": "file",
-              "name": "dog002.jpg"
+              "name": "focus.png",
+              "type": "file"
+            },
+            {
+              "name": "mustang.jpg",
+              "type": "file"
+            },
+            {
+              "name": "specs.pdf",
+              "type": "file"
             }
           ]
+        },
+        {
+          "name": "lada.jpg",
+          "type": "file"
+        },
+        {
+          "name": "list.txt",
+          "type": "file"
         }
       ]
-    },
-    {
-      "type": "file",
-      "name": "bear.png"
-    },
-    {
-      "type": "file",
-      "name": "horse.png"
     }
   ]
 }

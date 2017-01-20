@@ -1,5 +1,6 @@
 .export {
     font-size: 30px;
+    display: inline;
 }
 
 .export .icon {
