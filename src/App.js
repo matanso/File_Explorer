@@ -3,6 +3,7 @@ import FileList from './FileList/index';
 import BackButton from './BackButton/index';
 import SearchBar from './SearchBar/index'
 import Data from './data.json';
+import Export from './export/index';
 import './App.css';
 
 class App extends React.Component {
@@ -17,6 +18,8 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
+                <Export data={Data}/>
+                <br/>
                 {this.renderPathBar()}
                 <SearchBar data={Data} update={(current, parents) => this.setState({current, parents})}/>
                 {this.renderBackButton()}

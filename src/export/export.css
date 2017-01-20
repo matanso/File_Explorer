@@ -1,30 +1,27 @@
-.File {
-    padding-left: 20px;
-    padding-top: 12px;
-
-    font-size: 50px;
+.export {
+    font-size: 30px;
 }
 
-.File .icon {
-    height: 50px;
+.export .icon {
+    height: 30px;
 }
 
-.File a {
+.export a {
     text-decoration: none;
     font-weight: lighter;
 }
 
-.File a:link, .File a:visited {
+.export a:link, .export a:visited {
     /* Applies to all links */
     color: blue;
 }
 
-.File a:hover {
+.export a:hover {
     /* Applies to links under the pointer */
     color: mediumblue;
 }
 
-.File a:active {
+.export a:active {
     /* Applies to activated links */
     color: darkblue;
 }
