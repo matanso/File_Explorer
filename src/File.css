@@ -1,0 +1,31 @@
+.File {
+    padding-left: 20px;
+    padding-top: 10px;
+
+    font-size: 50px;
+    font-family: Roboto, sans-serif;
+}
+
+.File .icon {
+    height: 50px;
+}
+
+.File a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.File a:link, .File a:visited {
+    /* Applies to all unvisited links */
+    color: blue;
+}
+
+.File a:hover {
+    /* Applies to links under the pointer */
+    color: mediumblue;
+}
+
+.File a:active {
+    /* Applies to activated links */
+    color: darkblue;
+}
