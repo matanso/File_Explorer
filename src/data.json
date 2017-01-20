@@ -91,6 +91,24 @@
           "type": "file"
         }
       ]
+    },
+    {
+      "name": "things",
+      "type": "folder",
+      "children": [
+        {
+          "name": "fork.png",
+          "type": "file"
+        },
+        {
+          "name": "knife_manual.txt",
+          "type": "file"
+        },
+        {
+          "name": "spoon.bmp",
+          "type": "file"
+        }
+      ]
     }
   ]
 }
