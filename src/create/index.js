@@ -18,8 +18,10 @@ class create extends React.Component {
     render() {
         if (!this.state.enabled)
             return (
-                <img src={icon} alt="create" className="icon"
-                     onClick={() => this.setState({enabled: !this.state.enabled})}/>
+                <div className="create">
+                    <img src={icon} alt="create" className="icon"
+                         onClick={() => this.setState({enabled: !this.state.enabled})}/>
+                </div>
             );
 
         return (
@@ -27,9 +29,12 @@ class create extends React.Component {
                 <img src={icon} alt="create" className="icon"
                      onClick={() => this.setState({enabled: !this.state.enabled})}/>
                 <div className="options">
-                    <span className="createOption"><img src={folderIcon} alt="folder" className="opIcon" onClick={() => this.setState({modal: 'folder'})}/></span>
-                    <span className="createOption"><img src={fileIcon} alt="file" className="opIcon" onClick={() => this.setState({modal: 'file'})}/> </span>
-                    {this.state.modal && <NameDialog close={() => this.closeModal()} create={name => this.create(this.state.modal, name)}/>}
+                    <span className="createOption"><img src={folderIcon} alt="folder" className="opIcon"
+                                                        onClick={() => this.setState({modal: 'folder'})}/></span>
+                    <span className="createOption"><img src={fileIcon} alt="file" className="opIcon"
+                                                        onClick={() => this.setState({modal: 'file'})}/> </span>
+                    {this.state.modal &&
+                    <NameDialog close={() => this.closeModal()} create={name => this.create(this.state.modal, name)}/>}
                 </div>
             </div>
         );
@@ -42,7 +47,7 @@ class create extends React.Component {
     create(type, name) {
         console.log(name);
         let file = {name, type};
-        if(type === 'folder') file.children = [];
+        if (type === 'folder') file.children = [];
         this.props.create(file);
         this.closeModal();
     }

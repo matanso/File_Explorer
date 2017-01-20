@@ -27,17 +27,17 @@ class FileList extends React.Component {
         function create(file, index) {
             switch (file.type) {
                 case 'folder':
-                    return <Directory key={index} name={file.name} onClick={() => this.props.onClick(index)} delete={del}/>;
+                    return <Directory key={index} name={file.name} onClick={() => this.props.onClick(index)} delete={() => this.del(file, index)}/>;
                 case 'file':
-                    return <File key={index} name={file.name} delete={del}/>;
+                    return <File key={index} name={file.name} delete={() => this.del(file, index)}/>;
                 default:
                     throw new Error(`Unknown object type ${file.type}`);
             }
-
-            function del() {
-                if(confirm(`Are you sure you want to delete ${file.name}?`)) this.props.delete(index)
-            }
         }
+    }
+
+    del(file, index) {
+        if(confirm(`Are you sure you want to delete ${file.name}?`)) this.props.delete(index)
     }
 }
 

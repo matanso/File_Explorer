@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Alef');
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: Alef, sans-serif;
     background-color: #222222;
 }

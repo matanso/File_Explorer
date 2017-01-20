@@ -14,15 +14,15 @@
 
 .export a:link, .export a:visited {
     /* Applies to all links */
-    color: blue;
+    color: #39adff;
 }
 
 .export a:hover {
     /* Applies to links under the pointer */
-    color: mediumblue;
+    color: #136ccd;
 }
 
 .export a:active {
     /* Applies to activated links */
-    color: darkblue;
+    color: rgba(11, 32, 255, 0.86);
 }

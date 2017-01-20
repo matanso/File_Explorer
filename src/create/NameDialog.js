@@ -17,10 +17,10 @@ class NameDialog extends React.Component {
 
                     <div className="modal-content">
                         <span className="close" onClick={this.props.close}>&times;</span>
-                        <p>Please enter name for the new file/folder:</p>
+                        <p className="request">Please enter name for the new file/folder:</p>
                         <form>
                         <input type="text" value={this.state.name} onChange={e => this.handleChange(e)}/>
-                        <input type="submit" onClick={() => this.props.create(this.state.name)}/>
+                        <input type="submit" value="Create" onClick={() => this.props.create(this.state.name)}/>
                         </form>
                     </div>
 
