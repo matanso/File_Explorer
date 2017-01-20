@@ -11,7 +11,7 @@ class Directory extends React.Component {
     render() {
         return (
             <div className="File">
-                <a href="#" onDoubleClick={() => console.log('clicked')}>
+                <a href="#" onDoubleClick={this.props.onClick}>
                     <img src={icon} className="icon"/> {this.props.name}
                 </a>
             </div>
