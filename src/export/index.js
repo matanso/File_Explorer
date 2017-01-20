@@ -11,7 +11,7 @@ class exportJson extends React.Component {
         return (
             <div className="export">
                 <a href="#" onClick={() => this.download()}>
-                    <img src={icon} className="icon"/> export to json
+                    <img src={icon} className="icon" alt="export"/> export to json
                 </a>
             </div>
         );
