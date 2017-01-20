@@ -19,7 +19,7 @@ class File extends React.Component {
         return (
             <div className="File">
                 <a href="#">
-                    <img src={icon[ext] || fileIcon} className="icon"/> {this.props.name}
+                    <img src={icon[ext] || fileIcon} className="icon" alt="file"/> {this.props.name}
                 </a>
             </div>
         );

@@ -12,7 +12,7 @@ class Directory extends React.Component {
         return (
             <div className="File">
                 <a href="#" onDoubleClick={this.props.onClick}>
-                    <img src={icon} className="icon"/> {this.props.name}
+                    <img src={icon} className="icon" alt="folder"/> {this.props.name}
                 </a>
             </div>
         );

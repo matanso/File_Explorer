@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import './FileList.css';
 import File from '../File/index';
 import Directory from '../Directory/index';
 
@@ -17,7 +18,7 @@ class FileList extends React.Component {
         if (!Array.isArray(this.props.files)) return (<div></div>);
         this.props.files.sort(compare);
         return (
-            <div>
+            <div className="FileList">
                 {this.props.files.map(create, this)}
             </div>
         );

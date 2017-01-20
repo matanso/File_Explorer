@@ -3,7 +3,6 @@
     padding-top: 12px;
 
     font-size: 50px;
-    font-family: Roboto, sans-serif;
 }
 
 .File .icon {
@@ -12,7 +11,7 @@
 
 .File a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 .File a:link, .File a:visited {
