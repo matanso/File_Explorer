@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
                     <span className="icon">&#128269;</span>
                     <Typeahead
                     options={getAllFiles(this.props.data)}
-                    maxVisible={2}
+                    maxVisible={4}
                     filterOption={(input, option) => option.toLowerCase().startsWith(input.toLowerCase())}
                     customClasses={{input: 'searchInput', listItem: 'option', listAnchor: 'link', results: 'list'}}
                     onOptionSelected={file => this.search(file)}
