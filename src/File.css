@@ -28,3 +28,7 @@
     /* Applies to activated links */
     color: darkblue;
 }
+
+.File .delIcon {
+    height: 20px;
+}

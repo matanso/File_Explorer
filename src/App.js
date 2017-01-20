@@ -23,11 +23,14 @@ class App extends React.Component {
                 {this.renderPathBar()}
                 <SearchBar data={Data} update={(current, parents) => this.setState({current, parents})}/>
                 {this.renderBackButton()}
-                <FileList files={this.state.current.children} onClick={(i) => {
+                <FileList files={this.state.current.children} onClick={i => {
                     this.state.parents.push(this.state.current);
                     this.setState({
                         current: this.state.current.children[i],
                     });
+                }} delete={i => {
+                    this.state.current.children.splice(i, 1);
+                    this.forceUpdate();
                 }}/>
             </div>
         );

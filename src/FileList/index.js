@@ -27,7 +27,9 @@ class FileList extends React.Component {
         function create(file, index) {
             switch (file.type) {
                 case 'folder':
-                    return <Directory key={index} name={file.name} onClick={() => this.props.onClick(index)}/>;
+                    return <Directory key={index} name={file.name} onClick={() => this.props.onClick(index)} delete={() => {
+                        if(confirm(`Are you sure you want to delete ${file.name}?`)) this.props.delete(index)
+                    }}/>;
                 case 'file':
                     return <File key={index} name={file.name}/>;
                 default:
