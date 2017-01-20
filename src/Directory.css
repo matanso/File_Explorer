@@ -1,0 +1,30 @@
+.Directory {
+    padding-left: 20px;
+    padding-top: 10px;
+
+    font-size: 50px;
+}
+
+.Directory .icon {
+    height: 50px;
+}
+
+.Directory a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link, a:visited {
+    /* Applies to all unvisited links */
+    color: blue;
+}
+
+a:hover {
+    /* Applies to links under the pointer */
+    color: mediumblue;
+}
+
+a:active {
+    /* Applies to activated links */
+    color: darkblue;
+}

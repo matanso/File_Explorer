@@ -1,13 +1,16 @@
 //noinspection JSUnresolvedVariable
 import React, { Component } from 'react';
 //noinspection JSUnresolvedVariable
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import Directory from './Directory';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+        <Directory name="files"/>
+      /*
+        <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
@@ -16,6 +19,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
+      */
     );
   }
 }
