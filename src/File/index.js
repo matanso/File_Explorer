@@ -6,6 +6,7 @@ import React from 'react';
 import '../File.css';
 import fileIcon from './file.svg';
 import picIcon from './picture.svg';
+import delIcon from '../delete.svg';
 
 const icon = {png: picIcon, jpg: picIcon, bmp: picIcon, txt: fileIcon};
 
@@ -20,7 +21,7 @@ class File extends React.Component {
             <div className="File">
                 <a href="#">
                     <img src={icon[ext] || fileIcon} className="icon" alt="file"/> {this.props.name}
-                </a>
+                </a> <a href="#" onClick={this.props.delete}><img src={delIcon} className="delIcon" alt="delete"/> </a>
             </div>
         );
     }
